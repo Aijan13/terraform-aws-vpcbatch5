@@ -15,6 +15,15 @@ module "vpc" {
     subnet1_name = "hello1"
     subnet2_name = "hello2"
     subnet3_name = "hello3"
-
 }
+```
+
+Create apache.sh file and input a script. Eg.
 ```hcl
+#!/bin/bash
+
+sudo apt update 
+sudo apt install apache2 -y
+sudo systemctl start apache2
+sudo systemctl enable apache2
+```
